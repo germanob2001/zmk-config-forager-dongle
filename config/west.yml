@@ -20,9 +20,9 @@ manifest:
     - name: zmk
       remote: zmkfirmware
       import: app/west.yml
-    #- name: forager-zmk-module-dongle
-    #  remote: carrefinho
-    #  revision: main
+    - name: forager-zmk-module-dongle
+      remote: carrefinho
+      revision: main
     - name: prospector-zmk-module
       remote: carrefinho
       revision: main

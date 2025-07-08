@@ -11,7 +11,7 @@
 #include <dt-bindings/zmk/outputs.h>
 
 &soft_off {
-    hold-time-ms = 500; // Only turn off it the key is held for half a secod or longer.
+    hold-time-ms = <500>; // Only turn off it the key is held for half a secod or longer.
 };
 
 &sk {

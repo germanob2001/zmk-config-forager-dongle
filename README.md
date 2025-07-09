@@ -2,4 +2,7 @@
 
 Firmware for [Forager](https://github.com/carrefinho/forager) keyboard (using official ZMK config with dongle).
 
-Currently with [Prospector](https://github.com/carrefinho/prospector) using [YADS](https://github.com/janpfischer/zmk-dongle-screen) screen, also availble with generic dongle with XIAO BLE and [RgbLed](https://github.com/caksoylar/zmk-rgbled-widget) module.
+Two dongle types configured :
+
+* [Prospector](https://github.com/carrefinho/prospector) Dongle +[YADS](https://github.com/janpfischer/zmk-dongle-screen) Screen
+* Generic XIAO BLE and [RgbLed Adapter](https://github.com/caksoylar/zmk-rgbled-widget) for notifications and layer status.

@@ -1,6 +1,6 @@
 # Forager ZMK Config
 
-Firmware for [Forager](https://github.com/carrefinho/forager) keyboard (using official ZMK config with dongle).
+Firmware for [Forager](https://github.com/carrefinho/forager) keyboard (using official ZMK [config with dongle](https://github.com/carrefinho/forager-zmk-module-dongle)).
 
 Two dongle types configured :
 

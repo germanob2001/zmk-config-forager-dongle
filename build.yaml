@@ -34,14 +34,22 @@ include:
     artifact-name: forager_dongle_prospector
   # left side
   - board: seeeduino_xiao_ble
+    shield: forager_left
+    artifact-name: forager_left
+  # left side + rgbled
+  - board: seeeduino_xiao_ble
     shield: forager_left rgbled_adapter
     cmake-args: -DCONFIG_RGBLED_WIDGET_BATTERY_SHOW_SELF=y
-    artifact-name: forager_left
+    artifact-name: forager_left_rgbled
   # right side
+  - board: seeeduino_xiao_ble
+    shield: forager_right
+    artifact-name: forager_right
+  # right side + rgbled
   - board: seeeduino_xiao_ble
     shield: forager_right rgbled_adapter
     cmake-args: -DCONFIG_RGBLED_WIDGET_BATTERY_SHOW_SELF=y
-    artifact-name: forager_right
+    artifact-name: forager_right_rgbled
   # settings reset
   - board: seeeduino_xiao_ble
     shield: settings_reset

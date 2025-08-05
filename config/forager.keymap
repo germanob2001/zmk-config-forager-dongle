@@ -19,10 +19,10 @@
 
         qwerty {
             bindings = <
-  &kp Q  &kp W  &kp E  &kp R   &kp T          &kp Y   &kp U   &kp I      &kp O    &kp P
-  &kp A  &kp S  &kp D  &kp F   &kp G          &kp H   &kp J   &kp K      &kp L    &kp RET
-  &kp Z  &kp X  &kp C  &kp V   &kp B          &kp N   &kp M   &kp COMMA  &kp DOT  &kp BSPC
-                       &trans  &lt 1 SPACE    &trans  &trans
+  &kp Q           &kp W           &kp E               &kp R           &kp T          &kp Y        &kp U            &kp I                    &kp O                 &kp P
+  &kp A           &kp S           &kp D               &kp F           &kp G          &kp H        &kp J            &kp K                    &kp L                 &kp RET
+  &mt LEFT_ALT Z  &mt LEFT_GUI X  &mt LEFT_CONTROL C  &kp V           &kp B          &kp N        &kp M            &mt RIGHT_CONTROL COMMA  &mt RIGHT_GUI PERIOD  &kp BSPC
+                                                      &kp LEFT_SHIFT  &lt 1 SPACE    &lt 2 SPACE  &kp RIGHT_SHIFT
             >;
         };
 

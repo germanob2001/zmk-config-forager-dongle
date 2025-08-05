@@ -17,16 +17,16 @@
     keymap {
         compatible = "zmk,keymap";
 
-        layer_0 {
+        qwerty {
             bindings = <
-  &kp Q  &kp W  &kp E  &kp R   &kp T     &kp Y   &kp U   &kp I      &kp O    &kp P
-  &kp A  &kp S  &kp D  &kp F   &kp G     &kp H   &kp J   &kp K      &kp L    &kp RET
-  &kp Z  &kp X  &kp C  &kp V   &kp B     &kp N   &kp M   &kp COMMA  &kp DOT  &kp BSPC
-                       &trans  &trans    &trans  &trans
+  &kp Q  &kp W  &kp E  &kp R   &kp T          &kp Y   &kp U   &kp I      &kp O    &kp P
+  &kp A  &kp S  &kp D  &kp F   &kp G          &kp H   &kp J   &kp K      &kp L    &kp RET
+  &kp Z  &kp X  &kp C  &kp V   &kp B          &kp N   &kp M   &kp COMMA  &kp DOT  &kp BSPC
+                       &trans  &lt 1 SPACE    &trans  &trans
             >;
         };
 
-        layer_1 {
+        numbers {
             bindings = <
   &kp LC(LS(ESCAPE))  &trans  &trans     &trans              &trans                 &kp LS(N7)        &kp N7          &kp N8  &kp N9  &kp EQUAL
   &trans              &trans  &kp LC(C)  &kp LC(LS(V))       &kp LC(V)              &kp LS(NUMBER_8)  &kp N4          &kp N5  &kp N6  &kp SQT
@@ -35,7 +35,7 @@
             >;
         };
 
-        layer_4 {
+        symbols {
             bindings = <
   &kp ESCAPE  &trans         &trans     &trans              &trans                 &kp LS(N7)        &kp N7          &kp UP_ARROW    &kp N9           &kp EQUAL
   &kp TAB     &trans         &kp LC(C)  &kp LC(LS(V))       &kp LC(V)              &kp LS(NUMBER_8)  &kp LEFT        &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp SQT
@@ -44,7 +44,7 @@
             >;
         };
 
-        layer_2 {
+        bt {
             bindings = <
   &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans          &trans  &trans  &trans  &trans
   &bt BT_DISC 0  &trans        &trans        &trans        &trans          &studio_unlock  &trans  &trans  &trans  &trans

@@ -12,52 +12,104 @@
 / {
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        th {
+            bindings = <&TH_THE>;
+            key-positions = <4 15>;
+        };
+
+        yu_you {
+            bindings = <&yu_you>;
+            key-positions = <5 6>;
+        };
+
+        an_and {
+            bindings = <&an_and>;
+            key-positions = <10 25>;
+        };
+
+        cn_can {
+            bindings = <&cn_can>;
+            key-positions = <22 25>;
+        };
+    };
+
+    macros {
+        TH_THE: TH_THE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp T &kp H &kp E>;
+            label = "TH_THE";
+        };
+
+        yu_you: yu_you {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Y &kp O &kp U>;
+            label = "YU_YOU";
+        };
+
+        an_and: an_and {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp A &kp N &kp D>;
+            label = "AN_AND";
+        };
+
+        cn_can: cn_can {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp C &kp A &kp N>;
+            label = "CN_CAN";
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
 
         qwerty {
             bindings = <
-  &kp Q           &kp W           &kp E               &kp R           &kp T          &kp Y        &kp U            &kp I                    &kp O                 &kp P
-  &kp A           &kp S           &kp D               &kp F           &kp G          &kp H        &kp J            &kp K                    &kp L                 &kp RET
-  &mt LEFT_ALT Z  &mt LEFT_GUI X  &mt LEFT_CONTROL C  &kp V           &kp B          &kp N        &kp M            &mt RIGHT_CONTROL COMMA  &mt RIGHT_GUI PERIOD  &kp BSPC
-                                                      &kp LEFT_SHIFT  &lt 1 SPACE    &lt 2 SPACE  &kp RIGHT_SHIFT
+  &kp Q           &kp W           &kp E  &kp R               &kp T          &kp Y        &kp U            &kp I                    &kp O                 &kp P
+  &kp A           &kp S           &kp D  &kp F               &kp G          &kp H        &kp J            &kp K                    &kp L                 &kp RET
+  &mt LEFT_ALT Z  &mt LEFT_GUI X  &kp C  &mt LEFT_CONTROL V  &kp B          &kp N        &kp M            &mt RIGHT_CONTROL COMMA  &mt RIGHT_GUI PERIOD  &kp BSPC
+                                         &kp LEFT_SHIFT      &lt 1 SPACE    &lt 2 SPACE  &kp RIGHT_SHIFT
             >;
         };
 
         numbers {
             bindings = <
-  &kp LC(LS(ESCAPE))  &trans  &trans     &trans              &trans                 &kp LS(N7)        &kp N7          &kp N8  &kp N9  &kp EQUAL
-  &trans              &trans  &kp LC(C)  &kp LC(LS(V))       &kp LC(V)              &kp LS(NUMBER_8)  &kp N4          &kp N5  &kp N6  &kp SQT
-  &trans              &trans  &trans     &kp RA(LEFT_BRACE)  &kp RA(RIGHT_BRACE)    &kp LS(NUMBER_9)  &kp N1          &kp N2  &kp N3  &kp LC(BSPC)
-                                         &trans              &trans                 &kp RALT          &kp LEFT_SHIFT
+  &kp LC(LS(ESCAPE))  &kp RA(NUMBER_2)  &trans     &trans              &mo 4                  &kp LS(N7)        &kp N7          &kp N8  &kp N9  &kp MINUS
+  &trans              &trans            &kp LC(C)  &kp LC(LS(V))       &kp LC(V)              &kp LS(NUMBER_8)  &kp N4          &kp N5  &kp N6  &kp SQT
+  &trans              &trans            &trans     &kp RA(LEFT_BRACE)  &kp RA(RIGHT_BRACE)    &kp LS(NUMBER_9)  &kp N1          &kp N2  &kp N3  &kp LC(BSPC)
+                                                   &trans              &trans                 &kp RALT          &kp LEFT_SHIFT
             >;
         };
 
         symbols {
             bindings = <
-  &kp ESCAPE  &trans         &trans     &trans              &trans                 &kp LS(N7)        &kp N7          &kp UP_ARROW    &kp N9           &kp EQUAL
-  &kp TAB     &trans         &kp LC(C)  &kp LC(LS(V))       &kp LC(V)              &kp LS(NUMBER_8)  &kp LEFT        &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp SQT
-  &caps_word  &kp LESS_THAN  &kp MINUS  &kp RA(LEFT_BRACE)  &kp RA(RIGHT_BRACE)    &kp LS(NUMBER_9)  &kp RA(SQT)     &kp RA(BSLH)    &kp N3           &kp LC(BSPC)
-                                        &kp LEFT_SHIFT      &lt 3 RIGHT_BRACE      &kp LC(LSHFT)     &kp LEFT_SHIFT
+  &kp ESCAPE  &trans         &kp LEFT_ALT          &kp LEFT_GUI                &trans                 &kp LS(N7)        &kp N7          &kp UP_ARROW    &kp N9           &kp EQUAL
+  &kp TAB     &trans         &mt LEFT_SHIFT LC(C)  &mt LEFT_CONTROL RS(LC(V))  &kp LC(V)              &kp LS(NUMBER_8)  &kp LEFT        &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp SQT
+  &caps_word  &kp LESS_THAN  &kp MINUS             &kp RA(LEFT_BRACE)          &kp RA(RIGHT_BRACE)    &kp LS(NUMBER_9)  &kp RA(SQT)     &kp RA(BSLH)    &kp N3           &kp LC(BSPC)
+                                                   &mo 3                       &kp LC(LEFT_SHIFT)     &kp LC(LSHFT)     &kp LEFT_SHIFT
             >;
         };
 
         bt {
             bindings = <
-  &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans          &trans  &trans  &trans  &trans
-  &bt BT_DISC 0  &trans        &trans        &trans        &trans          &studio_unlock  &trans  &trans  &trans  &trans
-  &trans         &trans        &trans        &trans        &trans          &trans          &trans  &trans  &trans  &trans
+  &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans          &kp C_VOLUME_UP    &kp C_BRIGHTNESS_INC  &trans  &kp LG(P)
+  &bt BT_DISC 0  &bt BT_CLR    &trans        &trans        &trans          &studio_unlock  &kp C_MUTE         &kp C_BRIGHTNESS_DEC  &trans  &kp RS(SLASH)
+  &trans         &trans        &trans        &trans        &trans          &trans          &kp C_VOLUME_DOWN  &trans                &trans  &kp SLASH
                                              &trans        &trans          &trans          &trans
             >;
         };
 
         layer_3 {
             bindings = <
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &kp F7  &kp F8  &kp F9  &kp F10
+  &trans  &trans  &trans  &trans  &trans    &trans  &kp F4  &kp F5  &kp F6  &kp F11
+  &trans  &trans  &trans  &trans  &trans    &trans  &kp F1  &kp F2  &kp F3  &kp F12
                           &trans  &trans    &trans  &trans
             >;
         };

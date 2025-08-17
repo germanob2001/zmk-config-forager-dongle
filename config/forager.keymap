@@ -77,37 +77,37 @@
 
         qwerty {
             bindings = <
-  &kp Q           &kp W           &kp E  &kp R               &kp T          &kp Y        &kp U            &kp I                    &kp O                 &kp P
-  &kp A           &kp S           &kp D  &kp F               &kp G          &kp H        &kp J            &kp K                    &kp L                 &kp RET
-  &mt LEFT_ALT Z  &mt LEFT_GUI X  &kp C  &mt LEFT_CONTROL V  &kp B          &kp N        &kp M            &mt RIGHT_CONTROL COMMA  &mt RIGHT_GUI PERIOD  &kp BSPC
+  &kp Q  &kp W           &kp E           &kp R               &kp T          &kp Y        &kp U               &kp I                    &kp O                 &kp P
+  &kp A  &mt LEFT_ALT S  &mt LEFT_GUI D  &mt LEFT_CONTROL F  &kp G          &kp H        &mt LEFT_CONTROL J  &mt LEFT_GUI K           &mt LEFT_ALT L        &kp RET
+  &kp Z  &kp X           &kp C           &kp V               &kp B          &kp N        &kp M               &mt RIGHT_CONTROL COMMA  &mt RIGHT_GUI PERIOD  &kp BSPC
                                          &kp LEFT_SHIFT      &lt 1 SPACE    &lt 2 SPACE  &kp RIGHT_SHIFT
             >;
         };
 
         numbers {
             bindings = <
-  &kp LC(LS(ESCAPE))  &kp RA(NUMBER_2)  &trans     &trans              &mo 4                  &kp LS(N7)        &kp N7          &kp N8  &kp N9  &kp MINUS
-  &trans              &trans            &kp LC(C)  &kp LC(LS(V))       &kp LC(V)              &kp LS(NUMBER_8)  &kp N4          &kp N5  &kp N6  &kp SQT
-  &trans              &trans            &trans     &kp RA(LEFT_BRACE)  &kp RA(RIGHT_BRACE)    &kp LS(NUMBER_9)  &kp N1          &kp N2  &kp N3  &kp LC(BSPC)
+  &kp LC(LS(ESCAPE))  &kp RA(NUMBER_2)  &trans     &trans              &mo 4                  &kp RIGHT_BRACE   &kp N7          &kp N8  &kp N9  &kp MINUS
+  &trans              &trans            &kp LC(C)  &kp LC(LS(V))       &kp LC(V)              &kp NON_US_BSLH   &kp N4          &kp N5  &kp N6  &kp LC(SEMI)
+  &trans              &trans            &trans     &kp RA(LEFT_BRACE)  &kp RA(RIGHT_BRACE)    &kp LS(NUMBER_9)  &kp N1          &kp N2  &kp N3  &kp SLASH
                                                    &trans              &trans                 &kp RALT          &kp LEFT_SHIFT
             >;
         };
 
         symbols {
             bindings = <
-  &kp ESCAPE  &trans         &kp LEFT_ALT          &kp LEFT_GUI                &trans                 &kp LS(N7)        &kp N7          &kp UP_ARROW    &kp N9           &kp EQUAL
-  &kp TAB     &trans         &mt LEFT_SHIFT LC(C)  &mt LEFT_CONTROL RS(LC(V))  &kp LC(V)              &kp LS(NUMBER_8)  &kp LEFT        &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp SQT
-  &caps_word  &kp LESS_THAN  &kp MINUS             &kp RA(LEFT_BRACE)          &kp RA(RIGHT_BRACE)    &kp LS(NUMBER_9)  &kp RA(SQT)     &kp RA(BSLH)    &kp N3           &kp LC(BSPC)
-                                                   &mo 3                       &kp LC(LEFT_SHIFT)     &kp LC(LSHFT)     &kp LEFT_SHIFT
+  &kp ESCAPE  &trans         &kp LEFT_ALT          &kp LEFT_GUI                &trans                     &kp LS(N7)        &kp N7          &kp UP_ARROW    &kp N9           &kp EQUAL
+  &kp TAB     &trans         &mt LEFT_SHIFT LC(C)  &mt LEFT_CONTROL RS(LC(V))  &kp LC(V)                  &kp LS(NUMBER_8)  &kp LEFT        &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp SQT
+  &caps_word  &kp LS(COMMA)  &kp MINUS             &kp RA(LS(LEFT_BRACE))      &kp RA(LS(RIGHT_BRACE))    &kp LS(NUMBER_9)  &kp RA(SQT)     &kp RA(BSLH)    &kp N3           &kp LC(BSPC)
+                                                   &kp LEFT_CONTROL            &mo 3                      &kp LC(LSHFT)     &kp LEFT_SHIFT
             >;
         };
 
         bt {
             bindings = <
-  &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp C_VOLUME_UP    &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &kp LG(P)
-  &bt BT_DISC 0   &bt BT_CLR    &trans        &trans        &trans          &kp K_MUTE         &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp RS(SLASH)
-  &studio_unlock  &trans        &trans        &trans        &trans          &kp C_VOLUME_DOWN  &trans          &trans          &trans           &kp SLASH
-                                              &trans        &trans          &trans             &trans
+  &bt BT_SEL 0        &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4            &kp C_VOLUME_UP    &mkp LCLK           &mmv MOVE_UP    &mkp RCLK        &kp LG(P)
+  &bt BT_DISC 0       &bt BT_CLR      &trans        &trans        &kp C_BRIGHTNESS_INC    &kp K_MUTE         &mmv MOVE_LEFT      &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp RS(SLASH)
+  &kp LA(LC(DELETE))  &studio_unlock  &trans        &trans        &kp C_BRIGHTNESS_DEC    &kp C_VOLUME_DOWN  &kp LG(LEFT_ARROW)  &kp LG(TAB)     &kp LG(RIGHT)    &kp SLASH
+                                                    &trans        &trans                  &trans             &trans
             >;
         };
 

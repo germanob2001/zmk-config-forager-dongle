@@ -11,13 +11,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-&hid_trackball_interface {
-    automouse-layer = <4>;
-    automouse-layer-timeout-ms = <600>;
-    scroll-layers = <1>;
-    snipe-layers = <>;
-};
-
 &mt {
     quick-tap-ms = <125>;
     flavor = "tap-preferred";

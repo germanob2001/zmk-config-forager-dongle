@@ -12,10 +12,10 @@
 #include <interfaces/hid-trackball.dtsi>
 
 &hid_trackball_interface {
-    automouse-layer = <5>;
+    automouse-layer = <4>;
     automouse-layer-timeout-ms = <600>;
-    scroll-layers = <2>;
-    snipe-layers = <3>;
+    scroll-layers = <1>;
+    snipe-layers = <>;
 };
 
 &mt {

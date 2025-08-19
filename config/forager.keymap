@@ -77,9 +77,9 @@
 
         qwerty {
             bindings = <
-  &kp Q  &kp W           &kp E           &kp R               &kp T          &kp Y        &kp U               &kp I                    &kp O                 &kp P
-  &kp A  &mt LEFT_ALT S  &mt LEFT_GUI D  &mt LEFT_CONTROL F  &kp G          &kp H        &mt LEFT_CONTROL J  &mt LEFT_GUI K           &mt LEFT_ALT L        &kp RET
-  &kp Z  &kp X           &kp C           &kp V               &kp B          &kp N        &kp M               &mt RIGHT_CONTROL COMMA  &mt RIGHT_GUI PERIOD  &kp BSPC
+  &kp Q  &kp W           &kp E           &kp R               &kp T          &kp Y        &kp U               &kp I           &kp O           &kp P
+  &kp A  &mt LEFT_ALT S  &mt LEFT_GUI D  &mt LEFT_CONTROL F  &kp G          &kp H        &mt LEFT_CONTROL J  &mt LEFT_GUI K  &mt LEFT_ALT L  &kp RET
+  &kp Z  &kp X           &kp C           &kp V               &kp B          &kp N        &kp M               &kp COMMA       &kp PERIOD      &kp BSPC
                                          &kp LEFT_SHIFT      &lt 1 SPACE    &lt 2 SPACE  &kp RIGHT_SHIFT
             >;
         };
